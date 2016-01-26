@@ -1,6 +1,10 @@
 <template name="Recipes">
   {{> NewRecipe}}
-  {{#each recipes}}
-    {{> Recipe}}
-  {{/each}}
+  {{#if Template.subscriptionsReady }}
+    {{#each recipes}}
+      {{> Recipe}}
+    {{/each}}
+  {{else}}
+    <p>加载中</p>
+  {{/if}}
 </template>
