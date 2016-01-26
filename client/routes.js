@@ -11,3 +11,10 @@ FlowRouter.route('/recipes', {
     BlazeLayout.render('MainLayout', {main: 'Recipes'});
   }
 });
+
+FlowRouter.route('/recipes/:id', {
+  name: 'recipe',
+  action() {
+    BlazeLayout.render('MainLayout', {main: 'RecipeSingle'});
+  }
+});
