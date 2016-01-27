@@ -3,3 +3,8 @@ Meteor.publish('recipes', function () {
 
   return Recipes.find({owner: this.userId});
 });
+
+Meteor.publish('recipeSingle', function (id) {
+  check(id, String);
+  return Recipes.find({_id: id});
+});
