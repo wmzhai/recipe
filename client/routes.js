@@ -1,6 +1,24 @@
+FlowRouter.triggers.enter([function(){
+    if(!Meteor.userId()){
+      FlowRouter.go('home');
+    }
+}]);
+
+Accounts.onLogin(function(){
+  FlowRouter.go('recipes');
+});
+
+Accounts.onLogout(function(){
+  FlowRouter.go('home');
+});
+
+
 FlowRouter.route('/', {
   name: 'home',
   action() {
+    if( Meteor.userId() ){
+      FlowRouter.go('recipes');
+    }
     BlazeLayout.render('HomeLayout');
   }
 });
