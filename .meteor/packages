@@ -39,3 +39,5 @@ gwendall:auth-client-callbacks
 
 reactive-var
 
+raix:handlebar-helpers
+msavin:jetsetter

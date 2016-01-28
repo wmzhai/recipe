@@ -17,3 +17,9 @@ Template.Recipes.helpers({
     return Recipes.find({}, options);
   }
 });
+
+Template.Recipes.events({
+  'click .new-recipe': function(){
+    Session.set('newRecipe', true);
+  }
+});
