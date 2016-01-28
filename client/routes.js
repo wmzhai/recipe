@@ -43,3 +43,10 @@ FlowRouter.route('/menu', {
     BlazeLayout.render('MainLayout', {main: 'Menu'});
   }
 });
+
+FlowRouter.route('/shopping', {
+  name: 'shopping',
+  action() {
+    BlazeLayout.render('MainLayout', {main: 'Shopping'});
+  }
+});
