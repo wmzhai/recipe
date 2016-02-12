@@ -8,6 +8,9 @@ Template.Recipes.onCreated(function () {
 });
 
 Template.Recipes.helpers({
+  ready: function() {
+    return Template.instance().subscriptionsReady();
+  },
   recipes: function () {
     options = {
       sort: {
